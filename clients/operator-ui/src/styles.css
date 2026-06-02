@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+  --bg: #0a1612;
+  --panel: #122820;
+  --accent: #10b981;
+  --text: #e8f5f0;
+  --muted: #7a9a8e;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #1e3d32;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.status-ok {
+  color: var(--accent);
+}
+
+.event-log {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+button {
+  background: var(--accent);
+  color: #042016;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button.secondary {
+  background: #1e3d32;
+  color: var(--text);
+}

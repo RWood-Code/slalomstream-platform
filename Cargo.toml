@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/slalom-core",
+    "crates/slalom-scoring",
+    "crates/slalom-bus",
+    "crates/slalom-api",
+    "crates/slalom-registry",
+    "crates/media-engine",
+    "apps/venue-node",
+]
+default-members = ["apps/venue-node"]
+
+[workspace.package]
+version = "3.0.0-alpha.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/RWood-Code/slalomstream-platform"
+authors = ["SlalomStream Contributors"]
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+axum = { version = "0.8", features = ["ws", "macros"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = "0.3"
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = "0.26"
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }

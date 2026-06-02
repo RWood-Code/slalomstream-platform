@@ -1,0 +1,28 @@
+[package]
+name = "slalom-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+axum = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+slalom-bus = { path = "../slalom-bus" }
+slalom-core = { path = "../slalom-core" }
+slalom-registry = { path = "../slalom-registry" }
+slalom-scoring = { path = "../slalom-scoring" }
+media-engine = { path = "../media-engine" }
+tower-http = { workspace = true }
+tracing = { workspace = true }
+futures-util = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+http-body-util = "0.1"
+tower = { workspace = true }
+media-engine = { path = "../media-engine" }
+slalom-bus = { path = "../slalom-bus" }
+slalom-core = { path = "../slalom-core" }
+slalom-registry = { path = "../slalom-registry" }
+tokio = { workspace = true }

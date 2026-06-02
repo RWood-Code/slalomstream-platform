@@ -1,0 +1,14 @@
+[package]
+name = "media-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+slalom-core = { path = "../slalom-core" }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
